@@ -1,0 +1,1906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.hfad.sudoku_solver.MainActivity"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/grid">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region11">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false"/>
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText2"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText3"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText4"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText5"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText6"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText7"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText8"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText9"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region12">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText10"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText11"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText12"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText13"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText14"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText15"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText16"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText17"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText18"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region13">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText19"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText20"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText21"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText22"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText23"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText24"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText25"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText26"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText27"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region21">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText28"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText29"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText30"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText31"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText30_1"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText33"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText34"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText35"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText36"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region22">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText37"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText38"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText39"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText40"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText41"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText42"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText43"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText44"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText45"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region23">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText46"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText47"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText48"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText49"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText50"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText51"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText52"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText53"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText54"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region31">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText55"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText56"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText57"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText58"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText59"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText60"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText61"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText62"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText63"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region32">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText64"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText65"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText66"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText67"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText68"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText69"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText70"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText71"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText72"
+                                android:background="@drawable/textfields"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_column="0"
+                        android:layout_margin="5dp"
+                        android:id="@+id/region33">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText73"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText74"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText75"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText76"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText77"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText78"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText79"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText80"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText81"
+                                android:background="@drawable/textfields2"
+                                android:height="28dp"
+                                android:width="28dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="3dp"
+                                android:textAlignment="center"
+                                android:textColor="#ffffff"
+                                android:textStyle="bold"
+                                android:editable="false"
+                                android:onClick="fieldClicked"
+                                android:focusableInTouchMode="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/button12"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#ff0000"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:id="@+id/button3"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:id="@+id/button5"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:id="@+id/button6"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:layout_weight="1"
+            android:id="@+id/button7"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="6"
+            android:id="@+id/button8"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:id="@+id/button9"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="8"
+            android:id="@+id/button10"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="9"
+            android:id="@+id/button11"
+            android:layout_weight="1"
+            android:textColor="#ffffff"
+            android:background="#7171c6"
+            android:layout_margin="2dp"
+            android:onClick="numberSelected"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/noneSelected"
+        android:layout_gravity="center_horizontal"
+        android:editable="false"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solve"
+        android:id="@+id/button"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:background="@drawable/button"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:textSize="30dp"
+        android:onClick="solve"
+        android:textAllCaps="false"/>
+
+</LinearLayout>
